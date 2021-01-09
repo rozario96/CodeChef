@@ -1,26 +1,23 @@
 #include <iostream>
-
-float withdraw(int x, float y)
-{
-    if(x % 5 == 0 && (x + 0.5) <= y)
-    {
-        return (y - x - 0.5);
-    }
-    else 
-    {
-        return y;
-    }
-}
+using namespace std;
 
 int main()
 {
     int x;
-    float y;
+    float y, balance;
     
-    std::cin >> x;
-    std::cin >> y;
+    cin >> x >> y;
 
-    printf("%.2f", withdraw(x, y));
+    if(x % 5 == 0 && (x + 0.5) <= y)
+    {
+        balance = (y - x - 0.5);
+    }
+    else 
+    {
+        balance = y;
+    }
+
+    printf("%.2f", balance);
 
     return 0;
 }
